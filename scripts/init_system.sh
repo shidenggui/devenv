@@ -116,7 +116,7 @@ install_fd () {
 install_fd
 
 install_fzf () {
-    if fzf --version >> /dev/null; then
+    if fzf --version >> /dev/null || [ -e /usr/local/bin/fzf ]; then
         echo fzf installed, skip ......
     else
         git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
