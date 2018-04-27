@@ -46,7 +46,7 @@ install_zsh_autosuggestions () {
     if grep zsh-autosuggestions ~/.zshrc >> /dev/null; then
         echo zsh-autosuggestions installed, skip ......
     else 
-        git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
         sed -i "/^plugins=(/ a zsh-autosuggestions" ~/.zshrc
 
         cat <<EOF >> ~/.zshrc
