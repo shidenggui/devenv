@@ -219,7 +219,7 @@ install_zsh_syntax_highlighting () {
     if grep zsh-syntax-highlighting ~/.zshrc >> /dev/null; then
         echo zsh-syntax-highlighting installed, skip ......
     else
-        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting || true
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting || true
         # enable zsh zsh-syntax-highlighting support
         sed -i "/^plugins=(/ a zsh-syntax-highlighting" ~/.zshrc
     fi
