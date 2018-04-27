@@ -18,19 +18,21 @@ set wildmode=longest:full,full
 " Ignore case of searches
 set ignorecase
 
+" Allow backspace in insert mode
+set backspace=indent,eol,start
+
 " When searching try to be smart about cases
 set smartcase
 
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-if exists("&undodir")
-  set undodir=~/.vim/undo
-  set undofile
-endif
 set nobackup
 set nowritebackup
 set noswapfile
+
+set undodir=~/.vim/undo
+set undofile
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*

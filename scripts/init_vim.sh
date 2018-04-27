@@ -17,10 +17,14 @@ cp_vim_folder () {
     if [ -e ~/.vim ]; then
         echo .vim exist, skip ......
     else
-        cp -r ${current_path}/../.vim ~
+        rsync -avzP ${current_path}/../.vim ~
     fi
 }
 
 cp_vim_folder
 
-pip install jedi
+install_vim_plugin_dependencies () {
+    pip install jedi
+}
+
+install_vim_plugin_dependencies
