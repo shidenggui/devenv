@@ -126,10 +126,16 @@ noremap  <buffer> <silent> $ g$
 call plug#begin('~/.vim/plugged')
 filetype plugin on           " load correspondent plugin accordint to file types
 
+" show git diff
+Plug 'airblade/vim-gitgutter'
+let g:gitgutter_map_keys = 0
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'tomasr/molokai'
+
+Plug 'tpope/vim-surround'
 
 Plug 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
@@ -145,6 +151,7 @@ let python_highlight_all = 1
 
 Plug 'scrooloose/nerdtree'
 map <leader>, :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.git$', '\.pyc$', '__pycache__', 'node_modules']
 
 Plug 'tacahiroy/ctrlp-funky'
 nnoremap <C-f> :CtrlPFunky<CR>
