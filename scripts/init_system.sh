@@ -64,7 +64,7 @@ install_ananconda () {
     if [ -e ~/anaconda3 ]; then
         echo anaconda3 installed, skip ......
     else
-        file=Anaconda3-5.1.0-Linux-x86_64.sh
+        file=Anaconda3-5.2.0-Linux-x86_64.sh
         wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/${file}
         bash $file -b -p $HOME/anaconda3
         cat <<EOF >> ~/.zshrc
